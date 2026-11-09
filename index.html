@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f1">
+  <meta name="description" content="16가지 협업 상황을 통해 나의 MBTI 성향과 일하는 방식을 알아보세요.">
+  <title>인간 사용 설명서 · MBTI 성향 테스트</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <span class="brand"><span class="brand-mark" aria-hidden="true">✳</span> 인간 사용 설명서</span>
+      <span class="edition">WORK STYLE <span>·</span> VOL. 01</span>
+    </header>
+
+    <main>
+      <section class="hero" id="start">
+        <div class="hero-content">
+          <p class="eyebrow">MBTI 성향 테스트</p>
+          <h1 id="start-title" tabindex="-1">나는 어떻게<br>일하는 사람일까<span>?</span></h1>
+          <p class="hero-description">일을 시작하는 순간부터 팀원과 의견을 맞출 때까지.<br class="desktop-break"> 16가지 상황에서 평소 내 모습에 가까운 답을 골라보세요.</p>
+          <button class="button primary" id="start-button" type="button">테스트 시작하기 <span aria-hidden="true">→</span></button>
+          <p class="hero-meta">16문항 <span aria-hidden="true">·</span> 약 3분</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="art-label">FIELD NOTES / 01</span>
+          <div class="art-stack">
+            <div class="art-card art-back"></div>
+            <div class="art-card art-front">
+              <span>THE<br>WORKBOOK</span>
+              <svg class="art-flower" viewBox="0 0 120 120">
+                <g fill="currentColor">
+                  <ellipse cx="60" cy="60" rx="15" ry="53"/>
+                  <ellipse cx="60" cy="60" rx="15" ry="53" transform="rotate(45 60 60)"/>
+                  <ellipse cx="60" cy="60" rx="15" ry="53" transform="rotate(90 60 60)"/>
+                  <ellipse cx="60" cy="60" rx="15" ry="53" transform="rotate(135 60 60)"/>
+                </g>
+                <circle cx="60" cy="60" r="12" fill="#e1f68e"/>
+              </svg>
+              <span class="art-card-index">01 <i></i> 16</span>
+            </div>
+          </div>
+          <span class="art-caption">A GUIDE TO THE WAY YOU WORK</span>
+        </div>
+      </section>
+
+      <section class="panel quiz" id="quiz" aria-labelledby="question" hidden>
+        <div class="progress-header">
+          <label for="progress">테스트 진행률</label>
+          <span id="progress-count">0 / 16</span>
+        </div>
+        <progress id="progress" value="0" max="16"></progress>
+        <form id="quiz-form">
+          <fieldset>
+            <legend id="question" tabindex="-1"></legend>
+            <div class="answers" id="answers"></div>
+          </fieldset>
+          <div class="controls">
+            <button class="button secondary" id="previous" type="button"><span aria-hidden="true">←</span> 이전</button>
+            <button class="button primary" id="next" type="submit" disabled>다음 <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel result" id="result" aria-labelledby="result-title" hidden>
+        <div class="result-banner">
+          <p class="eyebrow">나의 협업 성향</p>
+          <span class="result-emoji" id="result-emoji" aria-hidden="true"></span>
+          <h2 id="result-title" tabindex="-1"><span id="result-type"></span> <span id="result-name"></span></h2>
+          <p id="result-description"></p>
+        </div>
+        <div class="result-tip">
+          <h3>내 사용 설명서 · 일을 시작할 때</h3>
+          <p id="result-tip"></p>
+        </div>
+        <div class="controls">
+          <button class="button secondary" id="restart" type="button">다시 하기</button>
+          <button class="button primary" id="share" type="button">결과 공유하기 <span aria-hidden="true">↗</span></button>
+        </div>
+        <p id="share-status" class="share-status" role="status"></p>
+        <div id="share-fallback" hidden>
+          <label for="share-text">아래 문구를 복사해 공유하세요.</label>
+          <textarea id="share-text" readonly rows="4"></textarea>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>✳ <span>나를 이해하는 작은 실험</span></span>
+      <span>이 테스트는 자기 탐색용이에요.</span>
+    </footer>
+  </div>
+</body>
+</html>

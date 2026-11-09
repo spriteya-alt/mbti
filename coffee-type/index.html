@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f4ea">
+  <meta name="description" content="카페에서 만나는 16가지 상황으로 나를 닮은 커피를 찾아보세요.">
+  <title>나는 무슨 커피 타입? · MBTI 성향 테스트</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <span class="brand"><span class="brand-mark" aria-hidden="true">✦</span> 커피 타입 테스트</span>
+      <span class="edition">THE COFFEE CLUB</span>
+    </header>
+    <main>
+      <section id="start" class="hero" aria-labelledby="start-title">
+        <div class="intro">
+          <p class="eyebrow">CAFÉ PERSONALITY TEST</p>
+          <h1 id="start-title" tabindex="-1">나는 무슨<br><span>커피 타입?</span></h1>
+          <p class="intro-copy">친구를 기다리는 시간부터 메뉴가 품절된 순간까지. 카페 속 16가지 선택으로 나를 닮은 커피를 찾아보세요.</p>
+          <button class="button primary" id="start-button" type="button">테스트 시작하기 <span aria-hidden="true">→</span></button>
+          <p class="meta">16문항 <span aria-hidden="true">·</span> 두 가지 선택지</p>
+        </div>
+        <div class="art" aria-hidden="true">
+          <span class="art-top">HOUSE BLEND <span>01 / 16</span></span>
+          <svg viewBox="0 0 420 340" class="coffee-art">
+            <g stroke="#48251d" stroke-width="3">
+              <ellipse cx="204" cy="255" rx="151" ry="45" fill="#eab99e"/>
+              <ellipse cx="204" cy="247" rx="151" ry="45" fill="#ffdac0"/>
+              <ellipse cx="204" cy="247" rx="103" ry="26" fill="none" stroke="#bc745f"/>
+              <path d="M286 142c53-20 77 8 61 36-9 17-31 26-57 23l3-19c17 1 32-5 37-15 6-13-9-18-34-9z" fill="#ffebd2"/>
+              <path d="M92 135h222l-10 48c-9 45-48 68-101 68s-92-23-101-68z" fill="#ffebd2"/>
+              <path d="M107 175c22 18 45 24 73 28m-61-6c13 11 30 18 44 21" fill="none" stroke="#df9679" stroke-linecap="round"/>
+              <ellipse cx="203" cy="135" rx="111" ry="40" fill="#fff4dd"/>
+              <ellipse cx="203" cy="137" rx="99" ry="31" fill="#985438"/>
+              <path d="M205 155c-9-6-44-15-44-26 0-9 24-11 42-1 14-12 39-10 42-1 4 11-27 21-40 28z" fill="#fbd0a6" stroke="none"/>
+              <path d="M176 134c10 0 22 5 29 13m21-14c-10 3-15 8-21 14" stroke="#b87557" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </g>
+            <g fill="none" stroke="#fff3dc" stroke-width="3" stroke-linecap="round">
+              <path d="M181 89c-18-20 18-27 0-49m35 49c-18-20 18-27 0-49"/>
+              <path d="M68 119v22m-11-11h22m270-50v28m-14-14h28"/>
+            </g>
+            <g fill="#713d30" stroke="#48251d" stroke-width="2">
+              <ellipse cx="72" cy="285" rx="13" ry="8" transform="rotate(-26 72 285)"/>
+              <ellipse cx="92" cy="305" rx="13" ry="8" transform="rotate(22 92 305)"/>
+            </g>
+            <path d="m63 289 17-8m4 21 17 6" stroke="#f1b9a0" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="art-bottom">A CUP OF YOURSELF <span>✦</span></span>
+        </div>
+      </section>
+
+      <section id="quiz" class="panel" aria-labelledby="question" hidden>
+        <div class="progress-header">
+          <label for="progress">테스트 진행률</label>
+          <span id="progress-count">1 / 16</span>
+        </div>
+        <progress id="progress" value="1" max="16"></progress>
+        <form id="quiz-form">
+          <fieldset>
+            <legend id="question" tabindex="-1"></legend>
+            <p class="question-hint">평소 내 모습에 더 가까운 쪽을 골라보세요.</p>
+            <div class="answers" id="answers"></div>
+          </fieldset>
+          <div class="controls">
+            <button class="button secondary" id="previous" type="button">← 이전</button>
+            <button class="button primary" id="next" type="submit" disabled><span id="next-label">다음</span> <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </section>
+
+      <section id="result" class="panel result" aria-labelledby="result-title" hidden>
+        <div class="result-card">
+          <div>
+            <p class="eyebrow">나를 닮은 한 잔</p>
+            <span id="result-emoji" class="result-emoji" aria-hidden="true"></span>
+            <h2 id="result-title" tabindex="-1"><span id="result-name"></span> <span id="result-type"></span></h2>
+            <p id="result-description"></p>
+          </div>
+          <img id="result-image" class="result-image" src="images/istj.svg" width="240" height="200" alt="" loading="lazy">
+        </div>
+        <h3>내가 고른 카페 속 행동</h3>
+        <ul id="result-examples"></ul>
+        <div class="controls">
+          <button class="button secondary" id="restart" type="button">다시 하기</button>
+          <button class="button primary" id="share" type="button">결과 공유하기 <span aria-hidden="true">↗</span></button>
+        </div>
+        <p id="share-status" class="share-status" role="status"></p>
+        <div id="share-fallback" hidden>
+          <label for="share-text">아래 문구를 복사해 공유하세요.</label>
+          <textarea id="share-text" rows="4" readonly></textarea>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>✦ &nbsp; THE COFFEE CLUB</span><span>가볍게 즐기는 자기 탐색 테스트</span></footer>
+  </div>
+</body>
+</html>

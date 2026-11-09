@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+  <defs><linearGradient id="drink" x2="0%" y2="100%"><stop offset="0%" stop-color="#723d27"/><stop offset="100%" stop-color="#b57649"/></linearGradient></defs>
+  <rect x="5" y="5" width="230" height="190" rx="16" fill="#e9a58e"/>
+  <rect x="12" y="12" width="216" height="176" rx="11" fill="none" stroke="#a55f50" stroke-opacity=".55"/>
+  <circle cx="120" cy="98" r="68" fill="#f4c1a6"/>
+  <path d="M42 79v18m-9-9h18m143-33v22m-11-11h22m-12 59v12m-6-6h12" fill="none" stroke="#fff3dc" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M105 68c-11-10 10-14 2-26m20 24c-10-9 10-13 4-23" fill="none" stroke="#fff3dc" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="120" cy="154" rx="57" ry="15" fill="#f4c1a6" stroke="#48251d" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M148 106c35-8 35 27 2 24l2-8c18 0 20-15 0-9z" fill="#fff1dc" stroke="#48251d" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M80 101h74l-6 27q-6 22-31 22t-31-22z" fill="#e3c3a4" stroke="#48251d" stroke-width="2.5" stroke-linejoin="round"/>
+  <ellipse cx="117" cy="101" rx="37" ry="13" fill="url(#drink)" stroke="#48251d" stroke-width="2.5" stroke-linejoin="round"/>
+  <ellipse cx="117" cy="102" rx="21" ry="4" fill="none" stroke="#d49458" stroke-width="2"/>
+</svg>
